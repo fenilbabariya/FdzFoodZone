@@ -1,0 +1,60 @@
+﻿.footerlinks {
+    color: #ffffff;
+    text-decoration: none !important;
+}
+
+    .footerlinks:hover {
+        color: gold;
+    }
+
+#footer1 {
+    background: #db0a46;
+}
+
+#footer2 {
+    background: #B20837;
+}
+
+.footer2 {
+    opacity:70%;
+}
+
+#btnselected {
+    background: #B20837;
+    color: white;
+}
+
+.details {
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: large;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    opacity: 80%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
+h5 {
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: large;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.media {
+    padding: 10px;
+    color: white;
+    opacity: 70%;
+    align-items: center;
+}
+
+.contact {
+    padding: 8px;
+    color: white; 
+    opacity:70%;
+    font-size:large;
+}

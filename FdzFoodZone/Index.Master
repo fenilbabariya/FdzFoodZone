@@ -1,0 +1,189 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="FdzFoodZone.Index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="shortcut icon" href="Logo.ico" type="image/x-icon">
+    <%-- main css --%>
+    <link href="main/css/min.css" rel="stylesheet" />
+    <%-- datatables css --%>
+    <link type="text/css" href="datatables/jquery.dataTables.min.css" rel="stylesheet" />
+    <%-- custom css --%>
+    <link href="css/custom.css" rel="stylesheet" />
+    
+    <%--  jquery --%>
+    <script src="main/js/bundle.min.js"></script>
+    <script src="datatables/jquery.js"></script>
+    <%-- popper js --%>
+    <script src="main/js/popper.min.js"></script>
+    <%-- main js --%>
+    <script src="main/js/min.js"></script>
+    <%-- Datatables js --%>
+    <script src="datatables/datatable.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%-- Header Start --%>        
+        <div>
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.aspx">
+        <img src="images/Logo.png" width="50" height="50"/>
+        FD'z Food Zone
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+          <%-- Buttons of different Items --%>
+          <li class="nav-item">
+            <asp:LinkButton CssClass="nav-link" ID="btnHome" runat="server" OnClick="btnHome_Click" >Home</asp:LinkButton>
+        </li>
+        <li class="nav-item">
+            <asp:LinkButton CssClass="nav-link" ID="btnFood" runat="server" OnClick="btnFood_Click" >Food</asp:LinkButton>
+        </li>
+
+        <li class="nav-item">
+            <asp:LinkButton CssClass="nav-link" ID="btnDrinks" runat="server" OnClick="btnDrinks_Click" >Drinks</asp:LinkButton>
+        </li>
+
+        <li class="nav-item">
+            <asp:LinkButton CssClass="nav-link" ID="btnDessert" runat="server" OnClick="btnDessert_Click" >Dessert</asp:LinkButton>
+        </li>
+
+        <li class="nav-item">
+            <asp:LinkButton CssClass="nav-link" ID="btnBeverages" runat="server" OnClick="btnBeverages_Click" >Beverages</asp:LinkButton>
+        </li>
+
+      </ul>
+        <%-- Buttons for different Operations --%>
+      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton CssClass="nav-link" ID="btnViewOrder" runat="server" OnClick="btnViewOrder_Click" >View Orders</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton CssClass="nav-link" ID="btnLoginCustomer" runat="server" OnClick="btnLoginCustomer_Click" >Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton CssClass="nav-link" ID="btnSignUpCustomer" runat="server" OnClick="btnSignUpCustomer_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton CssClass="nav-link" ID="btnLogout" runat="server" Visible="False" OnClick="btnLogout_Click">Logout</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton CssClass="nav-link" ID="btnHello" runat="server" Visible="False">Hello user</asp:LinkButton>
+                        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        </div>
+        <%--<br />--%>
+        <%-- Header End --%>
+        <%-- Main Content Placeholder Start --%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%-- Main Content Placeholder End --%>
+
+        <!-- Footer Start-->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <br />
+                <div class="row mx-auto">
+                    <div class="col-md-5">
+                        <h5>All you need is delicious food...</h5>
+                        <p class="details">Visit your nearest FDz Restaurant</p>
+                        <br />
+                        <p class="details">FDz Food Zone</p>
+                        <p class="details">Main Branch:</p>
+                        <p class="details">Indira Circle,</p>
+                        <p class="details">150, Feet Ring Road,</p>
+                        <p class="details">Rajkot</p>
+                        </div>
+                    <div class="col-md-4">
+                        <h5>SOCIAL MEDIA</h5>
+                            <table>
+                                <tr>
+                                <%-- Social Media Buttons --%>
+                                <td class="media">
+                                    <asp:ImageButton ID="btnInsta" runat="server" ImageUrl="~/images/instagram.png" OnClick="btnInsta_Click" />
+                                </td>
+                                <td class="media">
+                                    <asp:ImageButton ID="btnFB" runat="server" ImageUrl="~/images/fb.png" OnClick="btnFB_Click"/>
+                                </td>
+                                <td class="media">
+                                    <asp:ImageButton ID="btnTwit" runat="server" ImageUrl="~/images/twitter.png" OnClick="btnTwit_Click" />
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                        <div class="col-md-auto">
+                            <%-- Contact US --%>
+                        <h5>CONTACT US</h5>
+                            <table>
+                                <tr>
+                                <td class="contact">
+                                    <img src="images/call.png" /></td>
+                                    <td class="contact"><p>+91 9484-526-444</p></td>
+                                </tr>
+                                <tr>
+                                <td class="contact">
+                                    <img src="images/call.png" /></td>
+                                    <td class="contact"><p>+91 9428-427-897</p>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td class="contact">
+                                    <img src="images/email.png" /></td>
+                                    <td class="contact"><p>contact@fdz.com</p>
+                                </td>
+                                </tr>
+                                </table>
+                        </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                            <%-- Admin Buttons --%>
+                            <asp:LinkButton CssClass="footerlinks" ID="btnAdminLogin" runat="server" OnClick="btnAdminLogin_Click">Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton CssClass="footerlinks" ID="btnManageFood" runat="server" Visible="False" OnClick="btnManageFood_Click">Food</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton CssClass="footerlinks" ID="btnManageDrinks" runat="server" Visible="False" OnClick="btnManageDrinks_Click">Drinks</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton CssClass="footerlinks" ID="btnManageDessert" runat="server" Visible="False" OnClick="btnManageDessert_Click">Dessert</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton CssClass="footerlinks" ID="btnManageBeverage" runat="server" Visible="False" OnClick="btnManageBeverage_Click">Beverage</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton CssClass="footerlinks" ID="btnCustomerList" runat="server" Visible="False" OnClick="btnCustomerList_Click">Customer List</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton CssClass="footerlinks" ID="btnChangePassword" runat="server" Visible="False" OnClick="btnChangePassword_Click">Change Password</asp:LinkButton>
+                            &nbsp;
+                            <br/>
+                        <br/>
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p class="footer2" style="color:whitesmoke">&copy All rights Reversed | Fenil Babariya | Devang Amrutiya </p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- Footer End -->
+    </form>
+</body>
+</html>
